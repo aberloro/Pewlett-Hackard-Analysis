@@ -41,7 +41,7 @@ SELECT * FROM emp_info;
 -- Joining retirement_info and dept_emp tables
 SELECT ri.emp_no,
     ri.first_name,
-	ri.last_name,
+    ri.last_name,
     de.to_date
 FROM retirement_info as ri
 LEFT JOIN dept_emp as de
