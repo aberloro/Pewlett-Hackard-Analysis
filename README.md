@@ -9,7 +9,7 @@ Client has requested additional analysis to inform on:
  2. Which employees are eligible for the company's mentorship program. 
 
 ## Results
-
+### Points from Deliverable 1: Employees Retiring by Title
  - Many of the employees who are about to retire have multiple titles, showing these valuable employees have recieved promotions or have cross trained in multiple departments: 
 
 ![retirement_titles](https://user-images.githubusercontent.com/93740725/153650542-e5d010d1-7622-4729-9ba0-9a2737f2cb6d.png)
@@ -19,13 +19,17 @@ Client has requested additional analysis to inform on:
 
 ![retiring_titles](https://user-images.githubusercontent.com/93740725/153511824-56499d08-1852-47c4-81fe-274fa5e5cd37.png)
 
+### Points from Deliverable 2: Who is Eligible for the Mentorship Program
  - There are 1,549 current employees listed as eligible for the mentorship program who were born in 1965. See a snippet of the table below:
 
 ![mentorship_eligibility](https://user-images.githubusercontent.com/93740725/153512872-c5392221-b7cd-43a4-859a-b06f93209b41.png)
   
 ## Summary
-PH is looking at an astonishing 72,458 employees retiring in the near future. There are only 1,549 qualified, current employees who are eligible to participate in the mentorhip program.  This is not enough to mentor the next generation of PH employees.  Rather than focusing on a 1:1 mentorship prgram, it would be advisable for PH to use this mentorhip-eligible employee pool to contribute to a more scalable solution, such as the development workshops and courses that would reach thousands of incoming employees at a time. 
+PH is looking at an astonishing 72,458 employees retiring in the near future. There are only 1,549 qualified, current employees who are eligible to participate in the mentorhip program.  This is not enough to mentor the next generation of PH employees.  
 
+Rather than focusing on a 1:1 mentorship prgram, it would be advisable for PH to use this mentorhip-eligible employee pool to contribute to a more scalable solution, such as the development workshops and courses that would reach thousands of incoming employees at a time. 
+
+### Additional Queries 
 It would be beneficial for the client to take a closer look at the current emplyess who are eligible to participate in the mentorship program to better prepare for the upcoming "silver tsunami".  The below table shows a count of eligible employees by title:
 
 ![mentorship_eligibility_by_title](https://user-images.githubusercontent.com/93740725/153638218-1ed9a5d2-1b04-4cb9-a1b0-e10e626fcc50.png)
