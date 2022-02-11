@@ -49,3 +49,50 @@ WHERE
 	de.to_date = '9999-01-01'AND
 	e.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
 ORDER BY e.emp_no;
+
+
+--D3, two additional tables
+--mentorship eligible by title--
+SELECT COUNT(title), title
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY COUNT(title) DESC;
+
+--compare current mentorship elegibility vs outgoing by dept
+--refactor previous mentorship_elegibility table to include dept_name
+SELECT DISTINCT ON (e.emp_no) e.emp_no,
+	e.first_name,
+	e.last_name,
+	e.birth_date,
+	de.from_date,
+	de.to_date,
+	t.title,
+	d.dept_name
+INTO mentorship_eligibility_with_dept
+FROM employees AS e
+INNER JOIN dept_emp AS de
+ON (e.emp_no = de.emp_no)
+INNER JOIN titles AS t 
+ON (e.emp_no = t.emp_no)
+INNER JOIN departments AS d
+ON (d.dept_no = de.dept_no)
+WHERE 
+	de.to_date = '9999-01-01'AND
+	e.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
+ORDER BY e.emp_no;
+
+--find count of available mentors per dept
+SELECT COUNT(title) AS "potential_mentors", 
+		dept_name 
+INTO available_mentors
+FROM mentorship_eligibility_with_dept
+GROUP BY dept_name
+ORDER BY COUNT(title) DESC;
+
+--join available mentors with retiring employees per dept
+SELECT COUNT(title) AS "potential_mentors", 
+		dept_name 
+INTO available_mentors
+FROM mentorship_eligibility_with_dept
+GROUP BY dept_name
+ORDER BY COUNT(title) DESC;
